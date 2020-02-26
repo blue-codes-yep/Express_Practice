@@ -1,4 +1,6 @@
 <h1> Greet Partial</h1>
+<ul>
 ${dataArray.map(item => 
-    `<p>${item.name}: ${item.lastname}</p>`
-)}
+    `<li>${item.name} ${item.lastname}</li>`
+).join('')}
+</ul>
