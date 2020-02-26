@@ -3,10 +3,14 @@ const express = require('express'),
 
 router.get('/', (req, res) => {
     const snippet = `<h2> Hello World <h2>`;
-    res
-        .status(200)
-        .send(snippet)
-        .end();
+    res.render('template', {
+    locals: {
+        title: 'HELLO WORLD'
+    },
+    partials: {
+        partial: 'partial-index'
+    }
+    });
 });
 
 module.exports = router;
