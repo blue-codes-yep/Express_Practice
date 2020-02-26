@@ -1,10 +1,11 @@
 const express = require('express'),
     router = express.Router();
 
-router.get('/', (req, res) => {
+router.get('/:name?', (req, res) => {
+    const {name} = req.params;
     res
         .status(200)
-        .send(`<h1> Hello Person </h1>`)
+        .send(`<h1> Hello ${name} </h1>`)
         .end();
 });
 
