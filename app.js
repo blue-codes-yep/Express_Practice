@@ -8,6 +8,7 @@ es6Renderer = require('express-es6-template-engine'),
  personController = require('./routes/person'),
  greetController = require('./routes/greet'),
  ageController = require('./routes/age');
+ ceosController = require('./routes/ceos')
 
 app.engine('html', es6Renderer);
 app.set('views','views');
@@ -25,3 +26,4 @@ app.use('/cats_and_dogs', cats_and_dogs_controller);
 app.use('/person', personController);
 app.use('/greet', greetController);
 app.use('/age', ageController);
+app.use('/ceos', ceosController)
