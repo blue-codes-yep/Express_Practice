@@ -1,6 +1,6 @@
 <h1>Hello World</h1>
 <ul>
 ${dataArray.map(item => 
-    `<li>${item.name} ${item.year}</li>`
+    `<li> <a href ='/ceos/${item.id}'>${item.name} ${item.year}</a></li>`
 ).join('')}
 </ul>
